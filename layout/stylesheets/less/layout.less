@@ -15,16 +15,82 @@
  */
 
 /* import core styles | Basis-Stylesheets einbinden */
-@import url(yaml/core/base.css);
+@import url(../yaml/core/base.css);
 
 /* import screen layout | Screen-Layout einbinden */
-@import url(basemod.css);
-@import url(content.css);
+@import url(../yaml/navigation/nav_slidingdoor.css);
+@import url(../css/basemod.css);
+
+
+
+
+
+/*Mobile as Default*/
+body, .page_margins {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 288px;
+}
+@import "basemod_mobile.css";
+
+
+/*Mobile*//*MQ -> Tablets*/
+@media only screen and (min-width: 667px) {
+  body, .page_margins {
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 576px;
+  }
+}
+@import "basemod_tablet.css";
+
+
+/*MQ -> Desktop*/
+@media only screen and (min-width: 985px) {
+  body, .page_margins {
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 864px;
+  }
+}
+@import "basemod_desktop.css";
+
+
+/*MQ -> Big Screen*/
+@media only screen and (min-width: 1304px) {
+  body, .page_margins {
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 1172px;
+  }
+}
+@import "basemod_bigscreen.css";
+
+
+/*MQ -> HDTV*/
+@media only screen and (min-width: 1938px) {
+  body, .page_margins {
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 1748px;
+  }
+}
+@import "basemod_hdtv.css";
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(../css/content.css);
 
 
 /* import print layout | Druck-Layout einbinden */
-/*
-@import url(print/print_003.css);
-*/
-
+@import url(../yaml/print/print_draft.css);
 

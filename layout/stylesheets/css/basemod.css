@@ -1,17 +1,11 @@
 /**
- * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) stylesheet for screen layout
+ * (de) Stylesheet für das Bildschirm-Layout
  *
- * (en) Template for designing a screen layout
- * (de) Gestaltungsvorlage für die Erstellung eines Screenlayouts
- *
- * @copyright       Copyright 2005-2010, Dirk Jesse
- * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
- *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
- * @link            http://www.yaml.de
- * @package         yaml
- * @version         3.3
- * @revision        $Revision:392 $
- * @lastmodified    $Date:2009-07-05 12:18:40 +0200 (So, 05. Jul 2009) $
+ * @creator       YAML Builder V1.2.1 (http://builder.yaml.de)
+ * @file          basemod.css
+ * @-yaml-minver  3.3
  */
 
 @media screen, projection
@@ -26,76 +20,43 @@
    * @valid CSS3
    */
 
-  body { overflow-y:scroll; }
+  body { overflow-y: scroll; }
 
- /*------------------------------------------------------------------------------------------------------*/
+  /*-------------------------------------------------------------------------*/
 
- /**
-  * Design of the Basic Layout | Gestaltung des YAML Basis-Layouts
-  *
-  * @section layout-basics
-  */
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body { background: #4d87c7 url("images/bg_blue.gif") repeat-x top left fixed; padding: 10px 0; }
 
-  /* Page margins and background | Randbereiche & Seitenhintergrund */
-  body {  }
+  /* Layout Alignment | Layout-Ausrichtung */
+  .page_margins { margin: 0 auto; }
 
-  /* Layout:Width, Background, Border | Layout:Breite, Hintergrund, Rahmen */
-  .page_margins {  }
-  .page{  }
+  /* Layout Properties | Layout-Eigenschaften */
+  .page_margins { width: 960px; background: #fff; }
+  .page { padding: 10px; }
+  #header { position:relative; padding: 45px 2em 1em 20px; color: #000; background:#edf2f8 url("../../images/bg_header.gif") repeat-x bottom left; }
+  #topnav { position:absolute; top:10px; right:10px; text-align:right; color: #aaa; background: transparent; }
+  #nav { overflow:hidden; }
+  div.hlist { background-color: #c8ddf3 }
+  #main { margin: 10px 0; background: #fff; }
+  #footer { padding: 10px 20px; color:#666; background: #f9f9f9; border-top: 5px #efefef solid; }
 
-  /* Design of the Main Layout Elements | Gestaltung der Hauptelemente des Layouts */
-  #header {  }
-  #topnav {  }
+  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
+  #nav ul { margin-left: 20px; }
 
-  #main {  }
+  /*-------------------------------------------------------------------------*/
 
-  #footer {  }
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   */
 
- /*------------------------------------------------------------------------------------------------------*/
-
- /**
-  * Formatting of the Content Area | Formatierung der Inhaltsbereichs
-  *
-  * @section layout-main
-  */
-
-  #col1 {  }
-  #col1_content {  }
-
-  #col2 {  }
-  #col2_content {  }
-
-  #col3 {  }
-  #col3_content {  }
-
-
- /*------------------------------------------------------------------------------------------------------*/
-
- /**
-  * Design of Additional Layout Elements | Gestaltung weiterer Layoutelemente
-  *
-  * @section layout-misc
-  */
-  
-  
-  
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Skiplinks 
-  *
-  * (en) Visual styling for skiplink navigation
-  * (de) Visuelle Gestaltung der Skiplink-Navigation
-  *
-  * @section content-skiplinks
-  */
-  
-  #skiplinks a.skip:focus,
-  #skiplinks a.skip:active { 
-	color:#fff; 
-	background:#333; 
-	border-bottom:1px #000 solid;
-	padding:10px 0;
-	text-decoration:none;
-  }  
+  #col1 { float: left; width: 25%}
+  #col2 { display:none}
+  #col3 { width: auto; margin: 0 0 0 25%}
+  #col1_content { padding: 0 10px 0 20px }
+  #col3_content { padding: 0 20px 0 10px }
+	
+  /*-------------------------------------------------------------------------*/
 }
