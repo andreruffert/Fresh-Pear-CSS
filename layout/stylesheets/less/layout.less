@@ -1,5 +1,5 @@
 /**
- * Fresh Pear
+ * Fresh Pear CSS
  *
  * Have a nice day and happy coding!
  *
@@ -11,13 +11,25 @@
 
 /*
 | ---------------------------------------------------------------------------------------------------
+| Less Variables
+| ---------------------------------------------------------------------------------------------------
+*/
+@link:          #99cc00;
+@link-visited:  #99cc00;
+@link-focus:    #ccff00;
+@link-hover:    #ccff00;
+
+
+/*
+| ---------------------------------------------------------------------------------------------------
 | Import core styles
 | ---------------------------------------------------------------------------------------------------
 */
 @import url(../../yaml/core/base.css);
 @import url(../../yaml/navigation/nav_shinybuttons.css);
-@import url(../css/basemod.css);
 
+
+@import "basemod.less";
 @import "content.less";
 
 
@@ -31,7 +43,20 @@ body, .page_margins {
   margin: 0 auto;
   width: 288px;
 }
-/* @import "basemod_mobile.less"; */
+
+/* Formatting content container */
+#col1,
+#col2,
+#col3 {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+#col1_content,
+#col2_content,
+#col3_content {
+  padding: 10px;
+}
 
 
 /*
@@ -46,7 +71,6 @@ body, .page_margins {
     width: 576px;
   }
 }
-/* @import "basemod_tablet.less"; */
 
 
 /*
@@ -60,8 +84,8 @@ body, .page_margins {
     margin: 0 auto;
     width: 864px;
   }
+  
 }
-/* @import "basemod_desktop.less"; */
 
 
 /*
@@ -75,8 +99,8 @@ body, .page_margins {
     margin: 0 auto;
     width: 1172px;
   }
+  
 }
-/* @import "basemod_bigscreen.less"; */
 
 
 /*
@@ -91,10 +115,23 @@ body, .page_margins {
     width: 1748px;
   }
 }
-/* @import "basemod_hdtv.less"; */
 
 
-
+/*
+| ---------------------------------------------------------------------------------------------------
+| MQ -> Desktop, Screen, HDTV
+| ---------------------------------------------------------------------------------------------------
+*/
+@media only screen and (min-width: 985px), (min-width: 1304px), (min-width: 1938px) {
+  /* Formatting content container */
+  #main { float: left; width: 100% }
+  #col1 { float: left; width: 50%;  margin: 0 0 0 25% }
+  #col2 { float: left; width: 25%;  margin: 0 0 0 -75% }
+  #col3 { float: right; width: 25%; margin-left: -5px; margin-right: 0; }
+  #col1_content { padding: 0 10px }
+  #col2_content { padding: 0 10px 0 20px }
+  #col3_content { padding: 0 20px 0 10px }
+}
 
 
 /*

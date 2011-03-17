@@ -1,23 +1,27 @@
 /**
- * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ * Fresh Pear CSS
  *
- * (en) IE-Patch stylesheet for YAML standard layout (3 columns without column dividers)
- * (de) IE-Korrektur-Stylesheet für das YAML Standard-Layout (3 Spalten ohne Spaltentrenner)
+ * Have a nice day and happy coding!
  *
- * @copyright       Copyright 2005-2010, Dirk Jesse
- * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
- *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
- * @link            http://www.yaml.de
- * @package         yaml
- * @version         3.2.1
- * @revision        $Revision: 430 $
- * @lastmodified    $Date: 2009-10-27 21:15:57 +0100 (Di, 27. Okt 2009) $
+ * @author    
+ * @copyright 
+ * @url       
+ * 
  */
-
-/* Layout independent adjustments | Layout-unabhängige Anpassungen ----------------------------------- */
+ 
+/*
+| ---------------------------------------------------------------------------------------------------
+| Layout independent adjustments
+| ---------------------------------------------------------------------------------------------------
+*/
 @import url(../../yaml/core/iehacks.css);
 
-/* Layout-dependent adjustments | Layout-abhängige Anpassungen --------------------------------------- */
+
+/*
+| ---------------------------------------------------------------------------------------------------
+| Layout-dependent adjustments
+| ---------------------------------------------------------------------------------------------------
+*/
 @media screen, projection
 {
   /**
@@ -48,6 +52,8 @@
     width: 80em;
 
     /* JS-Expression for min-/max-width simulation */
-  width: expression((document.documentElement && document.documentElement.clientHeight) ? ((document.documentElement.clientWidth < 740) ? "740px" : ((document.documentElement.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )) : ((document.body.clientWidth < 740) ? "740px" : ((document.body.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )));
+    width: expression((document.documentElement && document.documentElement.clientHeight) ? ((document.documentElement.clientWidth < 740) ? "740px" : ((document.documentElement.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )) : ((document.body.clientWidth < 740) ? "740px" : ((document.body.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )));
   }
+  
+  
 }

@@ -1,5 +1,5 @@
 /**
- * Fresh Pear
+ * Fresh Pear CSS
  *
  * Have a nice day and happy coding!
  *
@@ -15,25 +15,17 @@
 | ---------------------------------------------------------------------------------------------------
 */
 
-/* (en) reset font size for all elements to standard (16 Pixel) */
-/* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
+/* reset font size for all elements to standard (16 Pixel) */
 html * { font-size:100.01%; }
 
-/**
- * (en) reset monospaced elements to font size 16px in all browsers
- * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
- *
- * @see: http://webkit.org/blog/67/strange-medium/
- */
-
+/* reset monospaced elements to font size 16px in all browsers */
 textarea, pre, code, kbd, samp, var, tt {
   font-family: monospace, sans-serif;
 }
 
-/* (en) base layout gets standard font size 12px */
-/* (de) Basis-Layout erhält Standardschriftgröße von 12 Pixeln */
+/* base layout gets standard font size 12px */
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, san serif;
   font-size:75.00%;
   color:#444;
 }
@@ -45,7 +37,7 @@ body {
 | ---------------------------------------------------------------------------------------------------
 */
 h1,h2,h3,h4,h5,h6 {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, san serif;
   font-weight:normal;
   color:#222;
   margin:0 0 0.25em 0;
@@ -126,11 +118,11 @@ hr {
 | Links
 | ---------------------------------------------------------------------------------------------------
 */
-a { color:#4D87C7; background:transparent; text-decoration:none; }
-a:visited  { color:#036; }
-a:focus { text-decoration:underline; color:#000; background: #fff; outline: 3px #f93 solid; }
+a { color:@link; background:transparent; text-decoration:none; }
+a:visited  { color:@link-visited; }
+a:focus { text-decoration:underline; color:@link-focus; background: #fff; outline: 3px #f93 solid; }
 a:hover,
-a:active { color:#182E7A; text-decoration:underline; outline: 0 none; }
+a:active { color:@link-hover; text-decoration:underline; outline: 0 none; }
 
 
 /*
@@ -165,6 +157,7 @@ p.icaption_right strong { display:block; overflow:hidden; margin-top:2px; paddin
 .float_left { float:left; display:inline; margin-right:1em; margin-bottom:0.15em; }
 .float_right { float:right; display:inline; margin-left:1em; margin-bottom:0.15em; }
 .center { display:block; text-align:center; margin:0.5em auto; }
+
 
 /*
 | ---------------------------------------------------------------------------------------------------
