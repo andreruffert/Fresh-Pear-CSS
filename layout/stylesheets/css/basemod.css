@@ -1,11 +1,17 @@
 /**
- * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
- * (en) stylesheet for screen layout
- * (de) Stylesheet für das Bildschirm-Layout
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
  *
- * @creator       YAML Builder V1.2.1 (http://builder.yaml.de)
- * @file          basemod.css
- * @-yaml-minver  3.3
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision:426 $
+ * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
  */
 
 @media screen, projection
@@ -19,44 +25,91 @@
    * @css-for all
    * @valid CSS3
    */
+  
+  body { overflow-y:scroll; }
 
-  body { overflow-y: scroll; }
-
-  /*-------------------------------------------------------------------------*/
+  /*------------------------------------------------------------------------------------------------------*/
+  
+  /**
+   * (en) Formatting YAML's  basic layout elements
+   * (de) Gestaltung des YAML Basis-Layouts
+   */
 
   /* (en) Marginal areas & page background */
   /* (de) Randbereiche & Seitenhintergrund */
-  body { background: #4d87c7 url("images/bg_blue.gif") repeat-x top left fixed; padding: 10px 0; }
+  body { background:#cccccc url("../../images/texture.jpg") 0 0 fixed; padding:10px 0; }
 
-  /* Layout Alignment | Layout-Ausrichtung */
-  .page_margins { margin: 0 auto; }
+  /* (en) Centering layout in old IE-versions */
+  /* (de) Zentrierung des Layouts in alten IE-versionen */
+  body { text-align:center; }
+  .page_margins { text-align:left; margin:0 auto; }
 
-  /* Layout Properties | Layout-Eigenschaften */
-  .page_margins { width: 960px; background: #fff; }
-  .page { padding: 10px; }
-  #header { position:relative; padding: 45px 2em 1em 20px; color: #000; background:#edf2f8 url("../../images/bg_header.gif") repeat-x bottom left; }
-  #topnav { position:absolute; top:10px; right:10px; text-align:right; color: #aaa; background: transparent; }
-  #nav { overflow:hidden; }
-  div.hlist { background-color: #c8ddf3 }
-  #main { margin: 10px 0; background: #fff; }
-  #footer { padding: 10px 20px; color:#666; background: #f9f9f9; border-top: 5px #efefef solid; }
+  /* (en) Layout:width, background, borders */
+  /* (de) Layout:Breite, Hintergrund, Rahmen */
+  .page_margins { background:#fff; }
+  .page { padding:10px; }
 
-  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
-  #nav ul { margin-left: 20px; }
+  #header {
+    color:#000;
+    background:#fff repeat-x top left;
+    padding:45px 2em 1em 20px;
+    position:relative;
+  }
 
-  /*-------------------------------------------------------------------------*/
+  /* (en) #topnav gets absolute positioning within #header */
+  /* (de) #topnav wird innerhalb von #header absolut positioniert */
+  #topnav { 
+    background:transparent; 
+  	color:#aaa; 
+    position:absolute;
+    top:10px;
+    right:10px; /* LTR */
+    text-align:right; /* LTR */
+  }
+
+  /* (en) adjustment of main navigation */
+  /* (de) Anpassung der Hauptnavigation */
+  #nav ul { margin-left:20px; }
+
+  #main { background:#fff;padding:10px 0; }
+
+  #footer {
+    color:#666;
+    background:#f9f9f9;
+    padding:10px 20px;
+    border-top:5px #efefef solid;
+    line-height:1.5em;
+  }
+
+  /* (en) Backup for correct positioning */
+  /* (de) Absicherung korrekte Positionierung */
+  #header, #nav, #main, #footer { clear:both; }
+
+  /*------------------------------------------------------------------------------------------------------*/
 
   /**
    * (en) Formatting content container
    * (de) Formatierung der Inhalts-Container
    *
+   * |-------------------------------|
+   * | #header                       |
+   * |-------------------------------|
+   * | #col1   | #col3     | #col2   |
+   * | 25%     | flexible  | 25%     |
+   * |-------------------------------|
+   * | #footer                       |
+   * |-------------------------------|
    */
 
-  #col1 { float: left; width: 25%}
-  #col2 { display:none}
-  #col3 { width: auto; margin: 0 0 0 25%}
-  #col1_content { padding: 0 10px 0 20px }
-  #col3_content { padding: 0 20px 0 10px }
-	
-  /*-------------------------------------------------------------------------*/
-}
+
+  #col1 { width:25%; }
+  #col1_content { padding:10px 10px 10px 20px; }
+
+  #col2 { width:25%; }
+  #col2_content { padding:10px 20px 10px 10px; }
+
+  #col3 { margin:0 25%; }
+  #col3_content { padding:10px; }
+  
+  
+  

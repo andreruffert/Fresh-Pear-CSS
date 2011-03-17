@@ -1,40 +1,44 @@
 /**
- * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ * Fresh Pear
  *
- * (en) draft for a central stylesheet
- * (de) Vorlage für ein zentrales Stylesheets
+ * Have a nice day and happy coding!
  *
- * @copyright       Copyright 2005-2010, Dirk Jesse
- * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
- *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
- * @link            http://www.yaml.de
- * @package         yaml
- * @version         3.3
- * @revision        $Revision: 466 $
- * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
+ * @author    
+ * @copyright 
+ * @url       
+ * 
  */
 
-/* import core styles | Basis-Stylesheets einbinden */
-@import url(../yaml/core/base.css);
-
-/* import screen layout | Screen-Layout einbinden */
-@import url(../yaml/navigation/nav_slidingdoor.css);
+/*
+| ---------------------------------------------------------------------------------------------------
+| Import core styles
+| ---------------------------------------------------------------------------------------------------
+*/
+@import url(../../yaml/core/base.css);
+@import url(../../yaml/navigation/nav_shinybuttons.css);
 @import url(../css/basemod.css);
 
+@import "content.less";
 
 
-
-
-/*Mobile as Default*/
+/*
+| ---------------------------------------------------------------------------------------------------
+| Mobile as Default
+| ---------------------------------------------------------------------------------------------------
+*/
 body, .page_margins {
   padding: 0 auto;
   margin: 0 auto;
   width: 288px;
 }
-@import "basemod_mobile.css";
+/* @import "basemod_mobile.less"; */
 
 
-/*Mobile*//*MQ -> Tablets*/
+/*
+| ---------------------------------------------------------------------------------------------------
+| MQ -> Tablets
+| ---------------------------------------------------------------------------------------------------
+*/
 @media only screen and (min-width: 667px) {
   body, .page_margins {
     padding: 0 auto;
@@ -42,10 +46,14 @@ body, .page_margins {
     width: 576px;
   }
 }
-@import "basemod_tablet.css";
+/* @import "basemod_tablet.less"; */
 
 
-/*MQ -> Desktop*/
+/*
+| ---------------------------------------------------------------------------------------------------
+| MQ -> Desktop
+| ---------------------------------------------------------------------------------------------------
+*/
 @media only screen and (min-width: 985px) {
   body, .page_margins {
     padding: 0 auto;
@@ -53,10 +61,14 @@ body, .page_margins {
     width: 864px;
   }
 }
-@import "basemod_desktop.css";
+/* @import "basemod_desktop.less"; */
 
 
-/*MQ -> Big Screen*/
+/*
+| ---------------------------------------------------------------------------------------------------
+| MQ -> Big Screen
+| ---------------------------------------------------------------------------------------------------
+*/
 @media only screen and (min-width: 1304px) {
   body, .page_margins {
     padding: 0 auto;
@@ -64,10 +76,14 @@ body, .page_margins {
     width: 1172px;
   }
 }
-@import "basemod_bigscreen.css";
+/* @import "basemod_bigscreen.less"; */
 
 
-/*MQ -> HDTV*/
+/*
+| ---------------------------------------------------------------------------------------------------
+| MQ -> HDTV
+| ---------------------------------------------------------------------------------------------------
+*/
 @media only screen and (min-width: 1938px) {
   body, .page_margins {
     padding: 0 auto;
@@ -75,22 +91,16 @@ body, .page_margins {
     width: 1748px;
   }
 }
-@import "basemod_hdtv.css";
+/* @import "basemod_hdtv.less"; */
 
 
 
 
 
-
-
-
-
-
-
-
-@import url(../css/content.css);
-
-
-/* import print layout | Druck-Layout einbinden */
-@import url(../yaml/print/print_draft.css);
+/*
+| ---------------------------------------------------------------------------------------------------
+| Import print layout
+| ---------------------------------------------------------------------------------------------------
+*/
+@import url(../../yaml/print/print_draft.css);
 
